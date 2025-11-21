@@ -68,5 +68,8 @@ yarn.lock
 # Docker
 .dockerignore
 
+# Template/import files (may contain sensitive keys)
+import/
+
 # Misc
 *.orig
