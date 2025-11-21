@@ -1,0 +1,43 @@
+{
+  "name": "@connorberghoffer/saaskit-db",
+  "version": "1.0.0",
+  "description": "Shared database package with PostgreSQL connection management",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "database",
+    "postgresql",
+    "pg",
+    "connection"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts",
+    "clean": "rimraf dist",
+    "lint": "eslint src --ext ts,tsx",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/pg": "^8.11.6"
+  }
+}

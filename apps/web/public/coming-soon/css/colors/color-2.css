@@ -1,0 +1,549 @@
+/*! ------------------------------------------------
+ * Project Name: Ramio - Clean Coming Soon and Landing Page Template
+ * Project Description: Ramio - awesome coming soon template to kick-start your project
+ * Tags: Ramio, coming soon, under construction, template, coming soon page, html5, css3
+ * Version: 2.0.4
+ * Build Date: April 2018
+ * Last Update: July 2025
+ * This product is available exclusively on Themeforest
+ * Author: mix_design
+ * Author URI: https://themeforest.net/user/mix_design
+ * File name: color-2.css
+ * ------------------------------------------------
+ *
+ * ------------------------------------------------
+ * Table of Contents
+ * ------------------------------------------------
+ *  3. Base Colors
+ *  6. Typography
+ *  7. Buttons & Triggers
+ *  8. Forms and Form Reply Groups
+ *  9. Main Section
+ *  10. Menu
+ *  11. Socials
+ *  12. Countdown
+ *  13. Content Sections
+ *  14. Custom Scroll
+ *  17. Blockquote
+ *  18. Team
+ *  19. Gallery
+ *  20. Contact Data
+ *  21. Google Map
+ *  22. Popup Forms
+ * ------------------------------------------------
+ * Table of Contents End
+ * ------------------------------------------------ */
+/* ------------------------------------------------*/
+/* Base Colors Start */
+/* ------------------------------------------------*/
+::-moz-selection {
+  background-color: #f3414d;
+  color: #95bce4;
+  text-shadow: none;
+}
+::selection {
+  background-color: #f3414d;
+  color: #95bce4;
+  text-shadow: none;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  background-color: rgb(145.8, 39, 46.2);
+  color: #616161;
+}
+
+a {
+  color: #303030;
+}
+
+/* ------------------------------------------------*/
+/* Base Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Typography Colors Start */
+/* ------------------------------------------------*/
+h1 {
+  color: #262626;
+}
+h1 span {
+  color: #95bce4;
+}
+h1.light-text {
+  color: #ffffff;
+}
+
+h2 {
+  color: #262626;
+}
+
+h3 {
+  color: #262626;
+}
+h3 small {
+  color: #aaa;
+}
+
+h4 {
+  color: #303030;
+}
+h4 small {
+  color: #303030;
+}
+
+.section-title span {
+  color: #262626;
+}
+.section-title span em {
+  color: #262626;
+}
+.section-title p {
+  color: #303030;
+}
+
+p {
+  color: #303030;
+}
+
+.contact-data__item .material-icons {
+  color: #95bce4;
+}
+.contact-data__item p {
+  color: #616161;
+}
+.contact-data__item a {
+  color: #616161;
+}
+.contact-data__item a::before {
+  background-color: #343434;
+}
+.no-touch .contact-data__item a:hover {
+  color: #303030;
+}
+
+strong {
+  color: #303030;
+}
+
+.txt-light {
+  color: #ffffff;
+}
+
+.txt-light-transparent {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.txt-accent-color {
+  color: #95bce4;
+}
+
+/* ------------------------------------------------*/
+/* Typography Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Buttons & Triggers Colors Start */
+/* ------------------------------------------------*/
+.button-dark {
+  color: #ffffff;
+  background-color: #f3414d;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+.button-dark::before, .button-dark::after {
+  background-color: #ffffff;
+}
+.no-touch .button-dark:hover {
+  color: #ffffff;
+  background-color: #f3414d;
+}
+
+.button-dark-outline {
+  border: 2px solid #303030;
+  color: #303030;
+}
+.button-dark-outline::before, .button-dark-outline::after {
+  background-color: #303030;
+}
+.no-touch .button-dark-outline:hover {
+  color: #303030;
+}
+
+.button-light {
+  color: #303030;
+  background-color: #ffffff;
+}
+.button-light::before, .button-light::after {
+  background-color: #f3414d;
+}
+.no-touch .button-light:hover {
+  color: #303030;
+  background-color: #ffffff;
+}
+
+.button-light-outline {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+.button-light-outline::before, .button-light-outline::after {
+  background-color: #ffffff;
+}
+.no-touch .button-light-outline:hover {
+  color: #ffffff;
+}
+
+.section-close {
+  color: #303030;
+  border: 2px solid #303030;
+}
+.section-close.light {
+  color: rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.no-touch .section-close:hover {
+  color: #303030;
+}
+.no-touch .section-close:hover.light {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ------------------------------------------------*/
+/* Buttons & Triggers Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Forms & Form Reply Groups Colors Start */
+/* ------------------------------------------------*/
+.form-dark ::-webkit-input-placeholder {
+  color: #303030;
+}
+.form-dark :-moz-placeholder {
+  color: #303030;
+}
+.form-dark ::-moz-placeholder {
+  color: #303030;
+}
+.form-dark :-ms-input-placeholder {
+  color: #303030;
+}
+.form-dark input:focus:required:invalid,
+.form-dark textarea:focus:required:invalid {
+  color: #303030;
+}
+.form-dark input:required:valid,
+.form-dark textarea:required:valid {
+  color: #303030;
+}
+.form-dark input, .form-dark textarea {
+  border-bottom: 1px solid #303030;
+  color: #303030;
+}
+.form-dark input:focus, .form-dark textarea:focus {
+  border-bottom: 1px solid #95bce4;
+}
+.form-dark .inputs-description {
+  color: #aaa;
+}
+
+.form-light ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-light :-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-light ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-light :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-light input:focus:required:invalid,
+.form-light textarea:focus:required:invalid {
+  color: #ffffff;
+}
+.form-light input:required:valid,
+.form-light textarea:required:valid {
+  color: #ffffff;
+}
+.form-light input, .form-light textarea {
+  border-bottom: 1px solid #ffffff;
+  color: #d8d8d8;
+}
+.form-light input:focus, .form-light textarea:focus {
+  border-bottom: 1px solid #95bce4;
+}
+.form-light .inputs-description {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ------------------------------------------------*/
+/* Forms & Form Reply Groups Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Main Section Colors Start */
+/* ------------------------------------------------*/
+.main {
+  background-color: #f3414d;
+}
+
+.main__intro {
+  background-color: #f3414d;
+}
+.main__intro::before {
+  background-color: rgb(194.4, 52, 61.6);
+}
+
+.intro__content {
+  background-color: #f3414d;
+}
+
+.main__media::before {
+  background-color: rgb(194.4, 52, 61.6);
+}
+
+/* ------------------------------------------------*/
+/* Main Section Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Menu Colors Start */
+/* ------------------------------------------------*/
+.intro__menu ul li::after {
+  background: #95bce4;
+}
+.no-touch .intro__menu ul li:hover a {
+  color: #ffffff;
+}
+.intro__menu ul li a {
+  color: #ffffff;
+}
+
+/* ------------------------------------------------*/
+/* Menu Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Socials Colors Start */
+/* ------------------------------------------------*/
+.intro__socials ul li a {
+  color: #ffffff;
+}
+.no-touch .intro__socials ul li:hover a {
+  color: #95bce4;
+}
+
+/* ------------------------------------------------*/
+/* Socials Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Countdown Colors Start */
+/* ------------------------------------------------*/
+.media__countdown #countdown {
+  color: #ffffff;
+}
+.media__countdown .help-text {
+  color: #ffffff;
+}
+
+/* ------------------------------------------------*/
+/* Countdown Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Content Sections Colors Start */
+/* ------------------------------------------------*/
+.scroll {
+  background-color: #ffffff;
+}
+
+.blocks {
+  background-color: #ffffff;
+}
+
+/* ------------------------------------------------*/
+/* Content Sections Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Custom Scroll Colors Start */
+/* ------------------------------------------------*/
+.mCSB_draggerContainer {
+  background: #95bce4;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: rgb(159.6, 194.7, 230.7);
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #f3414d;
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #f3414d;
+}
+
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #f3414d;
+}
+
+/* ------------------------------------------------*/
+/* Custom Scroll Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Blockquote Colors Start */
+/* ------------------------------------------------*/
+.blockquote__content blockquote p {
+  color: #303030;
+}
+.blockquote__content blockquote cite {
+  color: #616161;
+}
+
+.blockquote__icon {
+  color: rgba(48, 48, 48, 0.1);
+}
+
+/* ------------------------------------------------*/
+/* Blockquote Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Team Colors Start */
+/* ------------------------------------------------*/
+.team__socials li a {
+  color: #aaa;
+}
+.no-touch .team__socials li:hover a {
+  color: #95bce4;
+}
+
+/* ------------------------------------------------*/
+/* Team Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Gallery Colors Start */
+/* ------------------------------------------------*/
+.my-gallery__item::after {
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.6)));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.6) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.6) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.6) 100%);
+}
+.my-gallery__item:nth-of-type(2)::after {
+  background-color: #95bce4;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(149, 188, 228, 0)), color-stop(50%, rgba(149, 188, 228, 0)), to(rgba(149, 188, 228, 0.6)));
+  background: -moz-linear-gradient(top, rgba(149, 188, 228, 0) 0%, rgba(149, 188, 228, 0) 50%, rgba(149, 188, 228, 0.6) 100%);
+  background: -o-linear-gradient(top, rgba(149, 188, 228, 0) 0%, rgba(149, 188, 228, 0) 50%, rgba(149, 188, 228, 0.6) 100%);
+  background: linear-gradient(to bottom, rgba(149, 188, 228, 0) 0%, rgba(149, 188, 228, 0) 50%, rgba(149, 188, 228, 0.6) 100%);
+}
+.my-gallery__item:nth-of-type(3)::after {
+  background-color: #f3414d;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 65, 77, 0)), color-stop(50%, rgba(243, 65, 77, 0)), to(rgba(243, 65, 77, 0.6)));
+  background: -moz-linear-gradient(top, rgba(243, 65, 77, 0) 0%, rgba(243, 65, 77, 0) 50%, rgba(243, 65, 77, 0.6) 100%);
+  background: -o-linear-gradient(top, rgba(243, 65, 77, 0) 0%, rgba(243, 65, 77, 0) 50%, rgba(243, 65, 77, 0.6) 100%);
+  background: linear-gradient(to bottom, rgba(243, 65, 77, 0) 0%, rgba(243, 65, 77, 0) 50%, rgba(243, 65, 77, 0.6) 100%);
+}
+.my-gallery__item figcaption h4 {
+  color: #303030;
+}
+.my-gallery__item figcaption h4 small {
+  color: #303030;
+}
+.my-gallery__item:nth-of-type(2) figcaption h4, .my-gallery__item:nth-of-type(3) figcaption h4 {
+  color: #ffffff;
+}
+.my-gallery__item:nth-of-type(2) figcaption h4 small, .my-gallery__item:nth-of-type(3) figcaption h4 small {
+  color: rgba(255, 255, 255, 0.8);
+}
+@media only screen and (min-width: 1200px) {
+  .my-gallery__item::after {
+    background-color: #ffffff;
+  }
+  .my-gallery__item:nth-of-type(2)::after {
+    background-color: #95bce4;
+  }
+  .my-gallery__item:nth-of-type(3)::after {
+    background-color: #f3414d;
+  }
+}
+
+.pswp__caption__center h4 {
+  color: #ffffff;
+}
+.pswp__caption__center h4 small {
+  color: rgba(255, 255, 255, 0.8);
+}
+.pswp__caption__center p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.pswp__bg {
+  background: rgb(72.9, 19.5, 23.1);
+}
+
+.pswp__caption, .pswp__top-bar {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.pswp__button--close {
+  background-color: #95bce4;
+}
+
+/* ------------------------------------------------*/
+/* Gallery Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Contact Data Colors Start */
+/* ------------------------------------------------*/
+.contact-data__item .material-icons {
+  color: #95bce4;
+}
+.contact-data__item p {
+  color: #616161;
+}
+.contact-data__item a {
+  color: #616161;
+}
+.contact-data__item a::before {
+  background-color: #343434;
+}
+.no-touch .contact-data__item a:hover {
+  color: #303030;
+}
+
+/* ------------------------------------------------*/
+/* Contact Data Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Google Map Colors Start */
+/* ------------------------------------------------*/
+#zoom-in, #zoom-out {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #f3414d;
+  border: 2px solid #f3414d;
+}
+
+/* ------------------------------------------------*/
+/* Google Map Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Popup Forms Colors Start */
+/* ------------------------------------------------*/
+.notify {
+  background-color: #ffffff;
+}
+.notify .popup__title .title {
+  color: #262626;
+}
+.notify .popup__content {
+  background-color: #ffffff;
+}
+
+.writealine {
+  background-color: #f3414d;
+}
+
+/* ------------------------------------------------*/
+/* Popup Forms Colors End */
+/* ------------------------------------------------*/

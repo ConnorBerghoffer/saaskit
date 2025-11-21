@@ -1,0 +1,35 @@
+---
+import Base from "../layouts/Base.astro";
+import ComingSoon from "../layouts/ComingSoon.astro";
+import { getConfig } from "@saaskit/config";
+import { getReleaseDate, isBeforeRelease } from "../lib/release";
+
+const config = getConfig();
+const releaseDate = getReleaseDate();
+const releaseDateDisplay = releaseDate.toLocaleDateString("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+});
+const releaseDateISO = releaseDate.toISOString();
+const comingSoonActive = isBeforeRelease();
+---
+{comingSoonActive ? (
+  <ComingSoon
+    config={config}
+    releaseDateDisplay={releaseDateDisplay}
+    releaseDateISO={releaseDateISO}
+  />
+) : (
+  <Base title={config.APP_NAME} description="Composable SaaS boilerplate">
+    <div style="text-align:center; max-width:480px;">
+      <p style="text-transform:uppercase; letter-spacing:0.2em; color:#94a3b8; font-size:0.8rem;">
+        {config.APP_NAME}
+      </p>
+      <h1 style="font-size:2.5rem; margin-bottom:1rem;">Astro marketing placeholder</h1>
+      <p style="color:#cbd5f5; font-size:1rem;">
+        Replace this with your marketing site or docs. Install optional packages to bring in ready-made content blocks.
+      </p>
+    </div>
+  </Base>
+)}

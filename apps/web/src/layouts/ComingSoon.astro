@@ -1,0 +1,516 @@
+---
+interface Props {
+  config: {
+    APP_NAME: string;
+    WEB_URL?: string;
+  };
+  releaseDateDisplay: string;
+  releaseDateISO: string;
+}
+
+const { config, releaseDateDisplay, releaseDateISO } = Astro.props as Props;
+const title = `${config.APP_NAME} – Coming Soon`;
+const description = `${config.APP_NAME} launches ${releaseDateDisplay}. Subscribe for updates.`;
+---
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={`coming soon, launch, ${config.APP_NAME}`} />
+    <meta name="author" content={config.APP_NAME} />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="icon" href="/coming-soon/img/favicon/monochrome/favicon.ico" sizes="any" />
+    <link rel="icon" href="/coming-soon/img/favicon/monochrome/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/coming-soon/img/favicon/monochrome/apple-touch-icon.png" />
+    <link rel="manifest" href="/coming-soon/img/favicon/monochrome/manifest.webmanifest" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={config.WEB_URL || ""} />
+    <meta property="og:image" content="/coming-soon/img/favicon/monochrome/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/coming-soon/css/loaders/loader-monochrome.css" />
+    <link rel="stylesheet" href="/coming-soon/css/plugins.css" />
+    <link rel="stylesheet" href="/coming-soon/css/main.css" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="msapplication-navbutton-color" content="#0f172a" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0f172a" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader-content">
+        <div class="loader-logo slideInDown">
+          <img src="/coming-soon/img/saaskit-logo.svg" alt={config.APP_NAME} />
+        </div>
+        <div class="loader-caption slideInUp">
+          <span class="loading-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <section id="main" class="main">
+      <div class="container-fluid p-0 fullheight">
+        <div class="row g-0 fullheight">
+          <div class="col-12 col-xl-6 main__intro">
+            <div class="intro__content">
+              <div class="intro__logo">
+                <img src="/coming-soon/img/saaskit-logo.svg" alt={config.APP_NAME} />
+              </div>
+              <div class="intro__menu">
+                <nav>
+                  <ul>
+                    <li><a href="#about" id="about-trigger">Vision</a></li>
+                    <li><a href="#works" id="works-trigger">Platform</a></li>
+                    <li><a href="#contact" id="contact-trigger">Contact</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="intro__socials">
+                <ul>
+                  <li>
+                    <a href="https://twitter.com/saaskit" target="_blank" rel="noreferrer">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/saaskit" target="_blank" rel="noreferrer">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/company/saaskit" target="_blank" rel="noreferrer">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="intro__headline">
+                <h1>
+                  {config.APP_NAME}
+                  <br />
+                  is on the way
+                </h1>
+                <p class="headline-text">
+                  We are shipping a fully modular SaaS stack—auth, billing, infra, and UI patterns that deploy in minutes instead of months.
+                </p>
+                <a href="#0" class="button button-l button-dark-outline" id="notify-trigger">
+                  <span class="button-caption">Notify me</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 main__media">
+            <div class="media__image media-1">
+              <div class="color-layer color-layer-medium"></div>
+              <div class="media__countdown">
+                <div id="countdown"></div>
+                <span class="help-text">Days to Launch · Launching {releaseDateDisplay}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="inner about">
+      <div class="container-fluid p-0 fullheight">
+        <div class="row g-0 flex-xl-row-reverse fullheight">
+          <div class="col-12 col-xl-6 scroll scroll-left about__info">
+            <div class="blocks no-padding-bottom">
+              <div class="section-controls">
+                <a href="#0" id="about-close" class="section-close">
+                  <span class="material-icons">arrow_back</span>
+                </a>
+              </div>
+              <div class="blocks__single section-title">
+                <h2>Why {config.APP_NAME}</h2>
+                <span>Launch-ready <em>infrastructure</em></span>
+                <p>
+                  Skip weeks of wiring auth, payments, email, and analytics. {config.APP_NAME} ships a batteries-included monorepo with typed APIs, Fastify backend, Vite dashboard, and Astro marketing shell.
+                </p>
+              </div>
+              <div class="blocks__single no-padding no-margin features">
+                <div class="container-fluid p-0">
+                  <div class="row g-0 features__item">
+                    <div class="col-12 col-md-6 features__image feature-1"></div>
+                    <div class="col-12 col-md-6 features__descr">
+                      <div class="descr__container">
+                        <h3>Unified design</h3>
+                        <p class="text-s">Shared tokens, shadcn primitives, and responsive layouts keep the app + marketing site consistent.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-0 flex-md-row-reverse features__item">
+                    <div class="col-12 col-md-6 features__image feature-2"></div>
+                    <div class="col-12 col-md-6 features__descr">
+                      <div class="descr__container">
+                        <h3>Production stack</h3>
+                        <p class="text-s">Fastify, Drizzle, Better Auth, Stripe, and Resend are wired together behind type-safe helpers.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-0 features__item">
+                    <div class="col-12 col-md-6 features__image feature-3"></div>
+                    <div class="col-12 col-md-6 features__descr">
+                      <div class="descr__container">
+                        <h3>Automation ready</h3>
+                        <p class="text-s">Turbo + pnpm orchestrate apps and packages so new modules drop in like npm installs.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-0 flex-md-row-reverse features__item">
+                    <div class="col-12 col-md-6 features__image feature-4"></div>
+                    <div class="col-12 col-md-6 features__descr">
+                      <div class="descr__container">
+                        <h3>Real metrics</h3>
+                        <p class="text-s">PostHog, Resend, and LemonSqueezy hooks are ready for observability and monetization.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="blocks__single blockquote">
+                <div class="container-fluid p-0">
+                  <div class="row g-0">
+                    <div class="col-12 blockquote__content">
+                      <i class="fa-solid fa-quote-left blockquote__icon"></i>
+                      <blockquote>
+                        <p>“Launch faster without duct taping a new stack every sprint.”</p>
+                        <cite>
+                          <span>{config.APP_NAME} Crew</span>
+                          <span>Founding Team</span>
+                        </cite>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 static fullheight about__photo static-bg-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="inner works">
+      <div class="container-fluid p-0 fullheight">
+        <div class="row g-0 flex-xl-row-reverse fullheight">
+          <div class="col-12 col-xl-6 scroll scroll-left works__info">
+            <div class="blocks">
+              <div class="section-controls">
+                <a href="#0" id="works-close" class="section-close">
+                  <span class="material-icons">arrow_back</span>
+                </a>
+              </div>
+              <div class="blocks__single section-title">
+                <h2>Platform preview</h2>
+                <span>Pieces you can <em>ship</em> day one</span>
+                <p>From onboarding flows to billing dashboards, each surface is built with composable packages so you can enable only what you need.</p>
+              </div>
+              <div class="blocks__single team">
+                <div class="container-fluid">
+                  <div class="row gx-5">
+                    <div class="col-12 col-sm-6 team__item">
+                      <img src="https://dummyimage.com/1080x1200/1f2937/e2e8f0" alt="Team Member" />
+                      <h3>
+                        Maya Reed
+                        <small>Product Design</small>
+                      </h3>
+                      <p>Shapes the dashboard system and mobile-first patterns.</p>
+                      <ul class="team__socials">
+                        <li>
+                          <a href="https://twitter.com/saaskit" target="_blank" rel="noreferrer"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="https://dribbble.com" target="_blank" rel="noreferrer"><i class="fa-brands fa-dribbble"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 team__item">
+                      <img src="https://dummyimage.com/1080x1200/111827/e2e8f0" alt="Team Member" />
+                      <h3>
+                        Leo Carter
+                        <small>Engineering Lead</small>
+                      </h3>
+                      <p>Owns the monorepo tooling, release automation, and package publishing flow.</p>
+                      <ul class="team__socials">
+                        <li>
+                          <a href="https://github.com/saaskit" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.linkedin.com/company/saaskit" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 static fullheight works__gallery">
+            <div class="container-fluid p-0">
+              <div class="row g-0 my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemtype="http://schema.org/ImageObject">
+                  <a href="https://dummyimage.com/900x1200/1f2937/e2e8f0" data-image="https://dummyimage.com/900x1200/1f2937/e2e8f0" class="my-gallery__link" itemprop="contentUrl" data-size="900x1200">
+                    <img src="https://dummyimage.com/450x600/1f2937/e2e8f0" class="my-gallery__image" itemprop="thumbnail" alt="Analytics" />
+                  </a>
+                  <figcaption class="my-gallery__description" itemprop="caption description">
+                    <h4>Analytics<small>Insights layer</small></h4>
+                    <p>Realtime usage dashboards powered by PostHog + custom events.</p>
+                  </figcaption>
+                </figure>
+                <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemtype="http://schema.org/ImageObject">
+                  <a href="https://dummyimage.com/900x1200/0f172a/e2e8f0" data-image="https://dummyimage.com/900x1200/0f172a/e2e8f0" class="my-gallery__link" itemprop="contentUrl" data-size="900x1200">
+                    <img src="https://dummyimage.com/450x600/0f172a/e2e8f0" class="my-gallery__image" itemprop="thumbnail" alt="Billing UI" />
+                  </a>
+                  <figcaption class="my-gallery__description" itemprop="caption description">
+                    <h4>Billing<small>LemonSqueezy</small></h4>
+                    <p>Checkout and customer portal screens ready for tier launches.</p>
+                  </figcaption>
+                </figure>
+                <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemtype="http://schema.org/ImageObject">
+                  <a href="https://dummyimage.com/900x1200/020617/e2e8f0" data-image="https://dummyimage.com/900x1200/020617/e2e8f0" class="my-gallery__link" itemprop="contentUrl" data-size="900x1200">
+                    <img src="https://dummyimage.com/450x600/020617/e2e8f0" class="my-gallery__image" itemprop="thumbnail" alt="CLI" />
+                  </a>
+                  <figcaption class="my-gallery__description" itemprop="caption description">
+                    <h4>CLI<small>create-saaskit-app</small></h4>
+                    <p>Generator stitches together optional packages and Docker targets.</p>
+                  </figcaption>
+                </figure>
+                <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemtype="http://schema.org/ImageObject">
+                  <a href="https://dummyimage.com/900x1200/111827/e2e8f0" data-image="https://dummyimage.com/900x1200/111827/e2e8f0" class="my-gallery__link" itemprop="contentUrl" data-size="900x1200">
+                    <img src="https://dummyimage.com/450x600/111827/e2e8f0" class="my-gallery__image" itemprop="thumbnail" alt="Emails" />
+                  </a>
+                  <figcaption class="my-gallery__description" itemprop="caption description">
+                    <h4>Email<small>Resend + react-email</small></h4>
+                    <p>Transactional templates for onboarding, billing, and alerts.</p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="inner contact">
+      <div class="container-fluid p-0 fullheight">
+        <div class="row g-0 flex-xl-row-reverse fullheight">
+          <div class="col-12 col-xl-6 scroll scroll-left contact__info">
+            <div class="blocks">
+              <div class="section-controls">
+                <a href="#0" id="contact-close" class="section-close">
+                  <span class="material-icons">arrow_back</span>
+                </a>
+              </div>
+              <div class="blocks__single section-title">
+                <h2>Get in touch</h2>
+                <span>Say hello to the <em>launch crew</em></span>
+                <p class="text-m">
+                  We’re onboarding early teams. Share your use case and we’ll set up a kickoff call as soon as the countdown ends.
+                </p>
+              </div>
+              <div class="blocks__single contact-data">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 col-sm-6 contact-data__item">
+                      <span class="material-icons">location_on</span>
+                      <p>
+                        44 Tehama Street
+                        <br />San Francisco, CA
+                        <br />94105
+                      </p>
+                    </div>
+                    <div class="col-12 col-sm-6 contact-data__item">
+                      <span class="material-icons">share</span>
+                      <ul>
+                        <li><a href="https://twitter.com/saaskit" target="_blank" rel="noreferrer">Twitter</a></li>
+                        <li><a href="https://github.com/saaskit" target="_blank" rel="noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/company/saaskit" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 col-sm-6 contact-data__item">
+                      <span class="material-icons">call</span>
+                      <p>
+                        <a href="tel:+14150000000">+1 (415) 000-0000</a>
+                      </p>
+                    </div>
+                    <div class="col-12 col-sm-6 contact-data__item">
+                      <span class="material-icons">edit</span>
+                      <p>
+                        <a href="mailto:hello@saaskit.dev?subject=Early%20access">hello@saaskit.dev</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-buttons">
+                <a href="#" class="button button-l button-dark-outline" id="contactform-trigger">
+                  <span class="button-caption">Write a line</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 static fullheight contact__map">
+            <div class="map">
+              <div id="google-map">
+                <div id="google-container"></div>
+                <div id="zoom-in">
+                  <span class="material-icons">add</span>
+                </div>
+                <div id="zoom-out">
+                  <span class="material-icons">remove</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="popup writealine">
+      <div class="popup__controls">
+        <a href="#0" id="writealine-close" class="section-close light">
+          <span class="material-icons">arrow_back</span>
+        </a>
+      </div>
+      <div class="popup__content">
+        <div class="popup__title">
+          <h4 class="title txt-light">Stay in touch</h4>
+          <p class="subtitle txt-light-transparent">
+            Tell us about your product and the blockers you want {config.APP_NAME} to remove.
+          </p>
+        </div>
+        <div class="blocks__single">
+          <div class="form-container">
+            <div class="reply-group">
+              <span class="material-icons txt-light">done</span>
+              <p class="reply-group__title txt-light"><span>Done</span>!</p>
+              <span class="reply-group__text txt-light-transparent">Thanks for your message. We will get back as soon as possible.</span>
+            </div>
+            <form class="form form-light contact-form" id="contact-form">
+              <input type="hidden" name="project_name" value={config.APP_NAME} />
+              <input type="hidden" name="admin_email" value="hello@saaskit.dev" />
+              <input type="hidden" name="form_subject" value={`${config.APP_NAME} Contact`} />
+              <div class="container-fluid p-0">
+                <div class="row gx-5">
+                  <div class="col-12 col-md-6">
+                    <input type="text" name="Name" placeholder="Your Name*" required />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <input type="text" name="Company" placeholder="Company name" />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <input type="email" name="E-mail" placeholder="Email Address*" required />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <input type="tel" name="Phone" placeholder="Phone Number" />
+                  </div>
+                  <div class="col-12">
+                    <textarea name="Message" placeholder="A Few Words*" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <span class="inputs-description">*Required fields</span>
+                    <button class="button button-l button-light" type="submit">
+                      <span class="button-caption">Send</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup notify">
+      <div the rest ... EOF    <div class="popup notify">
+      <div class="popup__controls">
+        <a href="#0" id="notify-close" class="section-close light">
+          <span class="material-icons">arrow_back</span>
+        </a>
+      </div>
+      <div class="popup__content">
+        <div class="popup__title">
+          <h4 class="title txt-light">Almost here!</h4>
+          <p class="subtitle txt-light-transparent">
+            Subscribe to receive the release checklist, migration guides, and first access once we flip the switch.
+          </p>
+        </div>
+        <div class="blocks__single">
+          <div class="form-container">
+            <div class="reply-group subscription-ok">
+              <span class="material-icons txt-light">done</span>
+              <p class="reply-group__title txt-light">Done!</p>
+              <span class="reply-group__text txt-light-transparent">Thanks for subscribing.</span>
+            </div>
+            <div class="reply-group subscription-error">
+              <span class="material-icons txt-light">sentiment_dissatisfied</span>
+              <p class="reply-group__title txt-light">Ooops!</p>
+              <span class="reply-group__text txt-light-transparent">Something went wrong. Please try again later.</span>
+            </div>
+            <form class="notify-form form form-light">
+              <input type="email" placeholder="Email Address*" required />
+              <button class="button button-l button-light" type="submit">
+                <span class="button-caption">Send</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__SAASKIT_RELEASE_DATE = "{releaseDateISO}";
+    </script>
+    <script src="/coming-soon/js/libs.min.js" defer></script>
+    <script src="/coming-soon/js/gallery-init.js" defer></script>
+    <script src="/coming-soon/js/ramio-custom.js" defer></script>
+    <script src="/coming-soon/js/maps/map-monochrome.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=" defer></script>
+  </body>
+</html>

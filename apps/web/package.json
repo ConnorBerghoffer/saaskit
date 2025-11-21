@@ -1,0 +1,19 @@
+{
+  "name": "web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 4420",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "eslint src --ext ts,tsx --ignore-pattern \"**/*.astro\""
+  },
+  "dependencies": {
+    "@saaskit/config": "workspace:*",
+    "astro": "^4.15.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

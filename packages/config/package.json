@@ -1,0 +1,42 @@
+{
+  "name": "@connorberghoffer/saaskit-config",
+  "version": "1.0.0",
+  "description": "Shared configuration package with environment variable validation",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "config",
+    "environment",
+    "validation",
+    "zod"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts",
+    "clean": "rimraf dist",
+    "lint": "eslint src --ext ts,tsx",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0"
+  }
+}
